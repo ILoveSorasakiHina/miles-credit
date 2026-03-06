@@ -1,0 +1,23 @@
+#!/bin/bash
+#PBS -N train_model
+#專案名稱，不需要更改
+#PBS -A NVST0001
+#PBS -q main 
+#設定執行時間限制，格式為 HH:MM:SS
+#PBS -l walltime=01:00:00
+#資源設定，這裡使用1個節點，64個CPU核心，4個GPU和480GB內存，我還沒嘗試過修改   
+#PBS -l select=1:ncpus=64:ngpus=4:mem=480GB   
+#PBS -j oe
+#輸出日誌文件的路徑，請確保該目錄存在
+#PBS -o /glade/derecho/scratch/rongyu/logs/train_model.log
+# 載入環境
+module load conda
+conda activate credit-derecho
+
+# 執行程式
+cd /glade/u/home/rongyu/miles-credit
+python applications/train.py -c config/example-v2026.1.0.yml
+
+
+
+
