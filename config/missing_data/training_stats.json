@@ -1,0 +1,11 @@
+{
+  "total_files": 1,
+  "total_timesteps": 1447,
+  "total_valid_pairs": 1439,
+  "total_gaps": 7,
+  "drop_rate": "0.48%",
+  "expected_interval_h": 6,
+  "filenames": [
+    "SixHourly_y_TOTAL_2006-01-01_2006-12-31_staged_miss.zarr"
+  ]
+}

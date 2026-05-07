@@ -40,7 +40,7 @@ from credit.models.checkpoint import (
 
 warnings.filterwarnings("ignore")
 
-
+logger = logging.getLogger(__name__)
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 os.environ["OMP_NUM_THREADS"] = "1"
 os.environ["MKL_NUM_THREADS"] = "1"
@@ -50,17 +50,9 @@ os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 # os.environ["NCCL_ASYNC_ERROR_HANDLING"] = "1"
 
 
-def load_model_states_and_optimizer(conf, model, device):
+def load_model_states_and_optimizer(conf, model, criterion, device):
     """
     Load the model states, optimizer, scheduler, and gradient scaler.
-
-    Args:
-        conf (dict): Configuration dictionary containing training parameters.
-        model (torch.nn.Module): The model to be trained.
-        device (torch.device): The device (CPU or GPU) where the model is located.
-
-    Returns:
-        tuple: A tuple containing the updated configuration, model, optimizer, scheduler, and scaler.
     """
 
     # convert $USER to the actual user name
@@ -93,10 +85,21 @@ def load_model_states_and_optimizer(conf, model, device):
         else conf["trainer"]["load_scheduler"]
     )
 
-    #  Load an optimizer, gradient scaler, and learning rate scheduler, the optimizer must come after wrapping model using FSDP
-    if not load_weights:  # Loaded after loading model weights when reloading
+    # ==== 新增：合併 Model 與 Loss 內的可訓練參數 ====
+    def get_trainable_params():
+        params = list(filter(lambda p: p.requires_grad, model.parameters()))
+        if hasattr(criterion, 'parameters'):
+            criterion_params = list(filter(lambda p: p.requires_grad, criterion.parameters()))
+            if criterion_params:
+                logger.info(f"Added {len(criterion_params)} parameter tensors from criterion to optimizer.")
+                params.extend(criterion_params)
+        return params
+    # ==================================================
+
+    #  Load an optimizer, gradient scaler, and learning rate scheduler
+    if not load_weights:  
         optimizer = torch.optim.AdamW(
-            filter(lambda p: p.requires_grad, model.parameters()),
+            get_trainable_params(), # ★ 改用合併後的參數
             lr=learning_rate,
             weight_decay=weight_decay,
             betas=(0.9, 0.95),
@@ -110,12 +113,12 @@ def load_model_states_and_optimizer(conf, model, device):
             else GradScaler(enabled=amp)
         )
 
-    # Multi-step training case -- when starting, only load the model weights (then after load all states)
+    # Multi-step training case -- when starting, only load the model weights
     elif load_weights and not (
         load_optimizer_conf or load_scaler_conf or load_scheduler_conf
     ):
         optimizer = torch.optim.AdamW(
-            filter(lambda p: p.requires_grad, model.parameters()),
+            get_trainable_params(), # ★ 改用合併後的參數
             lr=learning_rate,
             weight_decay=weight_decay,
             betas=(0.9, 0.95),
@@ -123,12 +126,6 @@ def load_model_states_and_optimizer(conf, model, device):
         # FSDP checkpoint settings
         if conf["trainer"]["mode"] == "fsdp":
             logging.info(f"Loading FSDP model state only from {save_loc}")
-            optimizer = torch.optim.AdamW(
-                filter(lambda p: p.requires_grad, model.parameters()),
-                lr=learning_rate,
-                weight_decay=weight_decay,
-                betas=(0.9, 0.95),
-            )
             optimizer = FSDPOptimizerWrapper(optimizer, model)
             checkpoint_io = TorchFSDPCheckpointIO()
             checkpoint_io.load_unsharded_model(
@@ -177,7 +174,7 @@ def load_model_states_and_optimizer(conf, model, device):
                 f"Loading FSDP model, optimizer, grad scaler, and learning rate scheduler states from {save_loc}"
             )
             optimizer = torch.optim.AdamW(
-                filter(lambda p: p.requires_grad, model.parameters()),
+                get_trainable_params(), # ★ 改用合併後的參數
                 lr=learning_rate,
                 weight_decay=weight_decay,
                 betas=(0.9, 0.95),
@@ -215,7 +212,7 @@ def load_model_states_and_optimizer(conf, model, device):
                 load_state_dict_error_handler(load_msg)
 
             optimizer = torch.optim.AdamW(
-                filter(lambda p: p.requires_grad, model.parameters()),
+                get_trainable_params(), # ★ 改用合併後的參數
                 lr=learning_rate,
                 weight_decay=weight_decay,
                 betas=(0.9, 0.95),
@@ -254,22 +251,12 @@ def load_model_states_and_optimizer(conf, model, device):
         for param_group in optimizer.param_groups:
             param_group["lr"] = learning_rate
 
-    return conf, model, optimizer, scheduler, scaler
-
+    # ★ 記得回傳多了一個 criterion
+    return conf, model, criterion, optimizer, scheduler, scaler
 
 def main(rank, world_size, conf, backend=None, trial=False):
     """
     Main function to set up training and validation processes.
-
-    Args:
-        rank (int): Rank of the current process.
-        world_size (int): Number of processes participating in the job.
-        conf (dict): Configuration dictionary containing model, data, and training parameters.
-        backend (str): Backend to be used for distributed training.
-        trial (bool, optional): Flag for whether this is an Optuna trial. Defaults to False.
-
-    Returns:
-        Any: The result of the training process.
     """
 
     # convert $USER to the actual user name
@@ -303,28 +290,47 @@ def main(rank, world_size, conf, backend=None, trial=False):
 
     # model
     m = load_model(conf)
-
-    # have to send the module to the correct device first
     m.to(device)
 
     # move out of eager-mode
     if conf["trainer"].get("compile", False):
         m = torch.compile(m)
 
+# ======================================================== #
+    # ==== 提早實例化 Loss，並把它推上 GPU ====
+    train_criterion = load_loss(conf)
+    
+    # ★ 關鍵修正：如果是 Diffusion，驗證時必須共用同一個去噪器來解碼！
+    if conf["loss"].get("training_loss") == "diffusion":
+        valid_criterion = train_criterion
+    else:
+        valid_criterion = load_loss(conf, validation=True)
+
+    if hasattr(train_criterion, "to"):
+        train_criterion = train_criterion.to(device)
+    if hasattr(valid_criterion, "to") and valid_criterion is not train_criterion:
+        valid_criterion = valid_criterion.to(device)
+    # ======================================================== #
+
     # Wrap in DDP or FSDP module, or none
     if conf["trainer"]["mode"] in ["ddp", "fsdp"]:
+        # 包裝主模型
         model = distributed_model_wrapper(conf, m, device)
+        
+        # ==== 新增：檢查 Loss 是否有可訓練參數，有的話也必須用 DDP 包裝 ====
+        has_trainable_loss = hasattr(train_criterion, 'parameters') and len(list(filter(lambda p: p.requires_grad, train_criterion.parameters()))) > 0
+        if has_trainable_loss:
+            logger.info("Wrapping train_criterion in DistributedDataParallel...")
+            train_criterion = distributed_model_wrapper(conf, train_criterion, device)
+        # ======================================================== #
     else:
         model = m
 
-    # Load model weights (if any), an optimizer, scheduler, and gradient scaler
-    conf, model, optimizer, scheduler, scaler = load_model_states_and_optimizer(
-        conf, model, device
+    # Load model weights, an optimizer, scheduler, and gradient scaler
+    # ★ 將 train_criterion 傳入，讓 Optimizer 抓取 Loss 的參數
+    conf, model, train_criterion, optimizer, scheduler, scaler = load_model_states_and_optimizer(
+        conf, model, train_criterion, device
     )
-
-    # Train and validation losses
-    train_criterion = load_loss(conf)
-    valid_criterion = load_loss(conf, validation=True)
 
     # Set up some metrics
     metrics = LatWeightedMetrics(conf)
@@ -347,8 +353,18 @@ def main(rank, world_size, conf, backend=None, trial=False):
         trial=trial,  # Optional
     )
 
-    return result
+    # ======================================================== #
+    # ==== 存檔提醒：手動存下 Loss 的權重 (若未在 Trainer.fit 內實作) ====
+    # 因為 Trainer 通常只存 model.state_dict()，我們在主程序結束時補存 Loss 權重
+    if rank == 0 and hasattr(train_criterion, 'state_dict'):
+        loss_ckpt_path = os.path.join(conf["save_loc"], "loss_checkpoint.pt")
+        # 處理 DDP module 的 module.state_dict() 取法
+        criterion_state = train_criterion.module.state_dict() if hasattr(train_criterion, "module") else train_criterion.state_dict()
+        torch.save({"criterion_state_dict": criterion_state}, loss_ckpt_path)
+        logger.info(f"Saved trainable loss criterion checkpoint to {loss_ckpt_path}")
+    # ======================================================== #
 
+    return result
 
 class Objective(BaseObjective):
     """

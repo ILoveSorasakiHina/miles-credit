@@ -618,8 +618,17 @@ class CrossFormer(BaseModel):
         x = self.up_block3(x)
         x = torch.cat([x, encodings[0]], dim=1)
 
-        x = self.up_block4(x)
+        # ====================================================================== #
+        # 暫存中間層特徵供 diffusion B2 使用
+        # 寫到 CrossFormer class-level dict，繞過 FSDP 對 instance attribute 的干擾
+        # ====================================================================== #
+        if not hasattr(CrossFormer, '_feat_hidden_storage'):
+            CrossFormer._feat_hidden_storage = {}
+        CrossFormer._feat_hidden_storage['last'] = x
+        # ====================================================================== #
 
+        x = self.up_block4(x)
+        
         if self.use_padding:
             x = self.padding_opt.unpad(x)
 

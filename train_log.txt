@@ -1,0 +1,947 @@
+W0410 15:07:15.233000 434211 site-packages/torch/distributed/run.py:792] 
+W0410 15:07:15.233000 434211 site-packages/torch/distributed/run.py:792] *****************************************
+W0410 15:07:15.233000 434211 site-packages/torch/distributed/run.py:792] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0410 15:07:15.233000 434211 site-packages/torch/distributed/run.py:792] *****************************************
+[W410 15:07:15.574536266 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+INFO:root:Running DDP on rank 4 with world_size 8 using nccl.
+[W410 15:07:28.437260628 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+INFO:root:Running DDP on rank 2 with world_size 8 using nccl.
+[W410 15:07:28.499803329 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+INFO:root:Running DDP on rank 7 with world_size 8 using nccl.
+[W410 15:07:28.502282358 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+INFO:root:Running DDP on rank 0 with world_size 8 using nccl.
+[W410 15:07:28.511464108 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+INFO:root:Running DDP on rank 5 with world_size 8 using nccl.
+[W410 15:07:28.561995843 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+INFO:root:Running DDP on rank 3 with world_size 8 using nccl.
+[W410 15:07:28.610767767 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+INFO:root:Running DDP on rank 6 with world_size 8 using nccl.
+[W410 15:07:28.669671784 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+INFO:root:Running DDP on rank 1 with world_size 8 using nccl.
+[W410 15:07:28.733388487 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.datasets.gap_aware_singlestep:Loaded 1439 valid pairs (original dataset had 1447 indices)
+INFO:root:Loaded a training GapAwareSingleStep dataset (forecast length = 1)
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.datasets.gap_aware_singlestep:Loaded 1441 valid pairs (original dataset had 1448 indices)
+INFO:root:Loaded a validation GapAwareSingleStep dataset (forecast length = 1)
+INFO:root:Loaded a training DataLoader for the GapAwareSingleStep ERA dataset.
+INFO:root:Loaded a validation DataLoader for the GapAwareSingleStep ERA dataset.
+INFO:credit.models:Loading the CrossFormer model with a conv decoder head and skip connections ...
+INFO:credit.models.crossformer:Adding spectral norm to all conv and linear layers
+INFO:credit.models.crossformer:using postblock
+INFO:credit.postblock:TracerFixer registered
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.datasets.gap_aware_singlestep:Loaded 1439 valid pairs (original dataset had 1447 indices)
+INFO:root:Loaded a training GapAwareSingleStep dataset (forecast length = 1)
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.datasets.gap_aware_singlestep:Loaded 1439 valid pairs (original dataset had 1447 indices)
+INFO:root:Loaded a training GapAwareSingleStep dataset (forecast length = 1)
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.datasets.gap_aware_singlestep:Loaded 1441 valid pairs (original dataset had 1448 indices)
+INFO:root:Loaded a validation GapAwareSingleStep dataset (forecast length = 1)
+INFO:credit.datasets.gap_aware_singlestep:Loaded 1439 valid pairs (original dataset had 1447 indices)
+INFO:root:Loaded a training DataLoader for the GapAwareSingleStep ERA dataset.
+INFO:root:Loaded a training GapAwareSingleStep dataset (forecast length = 1)
+INFO:root:Loaded a validation DataLoader for the GapAwareSingleStep ERA dataset.
+INFO:credit.models:Loading the CrossFormer model with a conv decoder head and skip connections ...
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.datasets.gap_aware_singlestep:Loaded 1439 valid pairs (original dataset had 1447 indices)
+INFO:root:Loaded a training GapAwareSingleStep dataset (forecast length = 1)
+INFO:credit.datasets.gap_aware_singlestep:Loaded 1439 valid pairs (original dataset had 1447 indices)
+INFO:root:Loaded a training GapAwareSingleStep dataset (forecast length = 1)
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.datasets.gap_aware_singlestep:Loaded 1439 valid pairs (original dataset had 1447 indices)
+INFO:root:Loaded a training GapAwareSingleStep dataset (forecast length = 1)
+INFO:credit.datasets.gap_aware_singlestep:Loaded 1441 valid pairs (original dataset had 1448 indices)
+INFO:root:Loaded a validation GapAwareSingleStep dataset (forecast length = 1)
+INFO:root:Loaded a training DataLoader for the GapAwareSingleStep ERA dataset.
+INFO:root:Loaded a validation DataLoader for the GapAwareSingleStep ERA dataset.
+INFO:credit.models:Loading the CrossFormer model with a conv decoder head and skip connections ...
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.datasets.gap_aware_singlestep:Loaded 1441 valid pairs (original dataset had 1448 indices)
+INFO:root:Loaded a validation GapAwareSingleStep dataset (forecast length = 1)
+INFO:root:Loaded a training DataLoader for the GapAwareSingleStep ERA dataset.
+INFO:root:Loaded a validation DataLoader for the GapAwareSingleStep ERA dataset.
+INFO:credit.models:Loading the CrossFormer model with a conv decoder head and skip connections ...
+INFO:credit.datasets.gap_aware_singlestep:Loaded 1439 valid pairs (original dataset had 1447 indices)
+INFO:root:Loaded a training GapAwareSingleStep dataset (forecast length = 1)
+INFO:credit.datasets.gap_aware_singlestep:Loaded 1441 valid pairs (original dataset had 1448 indices)
+INFO:root:Loaded a validation GapAwareSingleStep dataset (forecast length = 1)
+INFO:credit.datasets.gap_aware_singlestep:Loaded 1441 valid pairs (original dataset had 1448 indices)
+INFO:root:Loaded a validation GapAwareSingleStep dataset (forecast length = 1)
+INFO:root:Loaded a training DataLoader for the GapAwareSingleStep ERA dataset.
+INFO:root:Loaded a validation DataLoader for the GapAwareSingleStep ERA dataset.
+INFO:root:Loaded a training DataLoader for the GapAwareSingleStep ERA dataset.
+INFO:root:Loaded a validation DataLoader for the GapAwareSingleStep ERA dataset.
+INFO:credit.models:Loading the CrossFormer model with a conv decoder head and skip connections ...
+INFO:credit.models:Loading the CrossFormer model with a conv decoder head and skip connections ...
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.datasets.gap_aware_singlestep:Loaded 1441 valid pairs (original dataset had 1448 indices)
+INFO:root:Loaded a validation GapAwareSingleStep dataset (forecast length = 1)
+INFO:root:Loaded a training DataLoader for the GapAwareSingleStep ERA dataset.
+INFO:root:Loaded a validation DataLoader for the GapAwareSingleStep ERA dataset.
+INFO:credit.models:Loading the CrossFormer model with a conv decoder head and skip connections ...
+INFO:credit.datasets.gap_aware_singlestep:Loaded 1441 valid pairs (original dataset had 1448 indices)
+INFO:root:Loaded a validation GapAwareSingleStep dataset (forecast length = 1)
+INFO:root:Loaded a training DataLoader for the GapAwareSingleStep ERA dataset.
+INFO:root:Loaded a validation DataLoader for the GapAwareSingleStep ERA dataset.
+INFO:credit.models:Loading the CrossFormer model with a conv decoder head and skip connections ...
+INFO:root:Activation checkpointing on ddp: True
+INFO:root:Checkpointing custom layers {<class 'credit.models.crossformer.DynamicPositionBias'>, <class 'credit.models.crossformer.CrossEmbedLayer'>, <class 'credit.models.crossformer.Attention'>, <class 'credit.models.crossformer.FeedForward'>}
+INFO:credit.models.crossformer:Adding spectral norm to all conv and linear layers
+INFO:credit.models.crossformer:Adding spectral norm to all conv and linear layers
+INFO:credit.models.crossformer:using postblock
+INFO:credit.postblock:TracerFixer registered
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.models.crossformer:Adding spectral norm to all conv and linear layers
+INFO:credit.models.crossformer:using postblock
+INFO:credit.postblock:TracerFixer registered
+INFO:credit.models.crossformer:Adding spectral norm to all conv and linear layers
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.models.crossformer:Adding spectral norm to all conv and linear layers
+INFO:credit.models.crossformer:Adding spectral norm to all conv and linear layers
+INFO:credit.models.crossformer:using postblock
+INFO:credit.postblock:TracerFixer registered
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.models.crossformer:using postblock
+INFO:credit.postblock:TracerFixer registered
+INFO:credit.models.crossformer:Adding spectral norm to all conv and linear layers
+INFO:credit.models.crossformer:using postblock
+INFO:credit.postblock:TracerFixer registered
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.models.crossformer:using postblock
+INFO:credit.postblock:TracerFixer registered
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:credit.models.crossformer:using postblock
+INFO:credit.postblock:TracerFixer registered
+INFO:credit.transforms:Loading stored mean and std data for z-score-based transform and inverse transform
+INFO:root:Activation checkpointing on ddp: True
+INFO:root:Checkpointing custom layers {<class 'credit.models.crossformer.Attention'>, <class 'credit.models.crossformer.FeedForward'>, <class 'credit.models.crossformer.DynamicPositionBias'>, <class 'credit.models.crossformer.CrossEmbedLayer'>}
+INFO:root:Activation checkpointing on ddp: True
+INFO:root:Checkpointing custom layers {<class 'credit.models.crossformer.DynamicPositionBias'>, <class 'credit.models.crossformer.CrossEmbedLayer'>, <class 'credit.models.crossformer.Attention'>, <class 'credit.models.crossformer.FeedForward'>}
+INFO:root:Activation checkpointing on ddp: True
+INFO:root:Checkpointing custom layers {<class 'credit.models.crossformer.Attention'>, <class 'credit.models.crossformer.FeedForward'>, <class 'credit.models.crossformer.DynamicPositionBias'>, <class 'credit.models.crossformer.CrossEmbedLayer'>}
+INFO:root:Activation checkpointing on ddp: True
+INFO:root:Checkpointing custom layers {<class 'credit.models.crossformer.Attention'>, <class 'credit.models.crossformer.FeedForward'>, <class 'credit.models.crossformer.DynamicPositionBias'>, <class 'credit.models.crossformer.CrossEmbedLayer'>}
+INFO:root:Activation checkpointing on ddp: True
+INFO:root:Checkpointing custom layers {<class 'credit.models.crossformer.Attention'>, <class 'credit.models.crossformer.FeedForward'>, <class 'credit.models.crossformer.DynamicPositionBias'>, <class 'credit.models.crossformer.CrossEmbedLayer'>}
+INFO:root:Activation checkpointing on ddp: True
+INFO:root:Checkpointing custom layers {<class 'credit.models.crossformer.Attention'>, <class 'credit.models.crossformer.FeedForward'>, <class 'credit.models.crossformer.DynamicPositionBias'>, <class 'credit.models.crossformer.CrossEmbedLayer'>}
+INFO:root:Activation checkpointing on ddp: True
+INFO:root:Checkpointing custom layers {<class 'credit.models.crossformer.Attention'>, <class 'credit.models.crossformer.FeedForward'>, <class 'credit.models.crossformer.DynamicPositionBias'>, <class 'credit.models.crossformer.CrossEmbedLayer'>}
+INFO:credit.losses:Loaded the VariableTotalLoss2D loss wrapper class for applying latititude or variable weights
+INFO:credit.losses.weighted_loss:Using latitude weights in loss calculations
+INFO:credit.losses:Loaded the VariableTotalLoss2D loss wrapper class for applying latititude or variable weights
+INFO:credit.losses:Loaded the VariableTotalLoss2D loss wrapper class for applying latititude or variable weights
+INFO:credit.losses:Loaded the VariableTotalLoss2D loss wrapper class for applying latititude or variable weights
+INFO:credit.losses.weighted_loss:Using latitude weights in loss calculations
+INFO:credit.losses:Loaded the VariableTotalLoss2D loss wrapper class for applying latititude or variable weights
+INFO:credit.losses.weighted_loss:Using latitude weights in loss calculations
+INFO:credit.losses.weighted_loss:Using latitude weights in loss calculations
+INFO:credit.losses.weighted_loss:Using latitude weights in loss calculations
+INFO:credit.losses:Loaded the VariableTotalLoss2D loss wrapper class for applying latititude or variable weights
+INFO:credit.losses:Loaded the VariableTotalLoss2D loss wrapper class for applying latititude or variable weights
+INFO:credit.losses.weighted_loss:Using latitude weights in loss calculations
+INFO:credit.losses.weighted_loss:Using latitude weights in loss calculations
+INFO:credit.losses:Loaded the VariableTotalLoss2D loss wrapper class for applying latititude or variable weights
+INFO:credit.losses.weighted_loss:Using latitude weights in loss calculations
+INFO:credit.losses.base_losses:Loaded the diffusion loss function with parameters: {'output_channels': 71, 'feature_channels': 128, 'mode': 'regression', 'reduction': 'none'}
+INFO:credit.losses.base_losses:Loaded the diffusion loss function with parameters: {'output_channels': 71, 'feature_channels': 128, 'mode': 'regression', 'reduction': 'none'}
+INFO:credit.losses.base_losses:Loaded the diffusion loss function with parameters: {'output_channels': 71, 'feature_channels': 128, 'mode': 'regression', 'reduction': 'none'}
+INFO:credit.losses.base_losses:Loaded the diffusion loss function with parameters: {'output_channels': 71, 'feature_channels': 128, 'mode': 'regression', 'reduction': 'none'}
+INFO:credit.losses.base_losses:Loaded the diffusion loss function with parameters: {'output_channels': 71, 'feature_channels': 128, 'mode': 'regression', 'reduction': 'none'}
+INFO:credit.losses.base_losses:Loaded the diffusion loss function with parameters: {'output_channels': 71, 'feature_channels': 128, 'mode': 'regression', 'reduction': 'none'}
+INFO:credit.losses.base_losses:Loaded the diffusion loss function with parameters: {'output_channels': 71, 'feature_channels': 128, 'mode': 'regression', 'reduction': 'none'}
+INFO:credit.losses.base_losses:Loaded the diffusion loss function with parameters: {'output_channels': 71, 'feature_channels': 128, 'mode': 'regression', 'reduction': 'none'}
+INFO:credit.losses:Loaded the VariableTotalLoss2D loss wrapper class for applying latititude or variable weights
+INFO:credit.losses:Loaded the VariableTotalLoss2D loss wrapper class for applying latititude or variable weights
+INFO:credit.losses.weighted_loss:Using latitude weights in loss calculations
+INFO:credit.losses.weighted_loss:Using latitude weights in loss calculations
+INFO:credit.losses:Loaded the VariableTotalLoss2D loss wrapper class for applying latititude or variable weights
+INFO:credit.losses.weighted_loss:Using latitude weights in loss calculations
+INFO:credit.losses:Loaded the VariableTotalLoss2D loss wrapper class for applying latititude or variable weights
+INFO:credit.losses:Loaded the VariableTotalLoss2D loss wrapper class for applying latititude or variable weights
+INFO:credit.losses:Loaded the VariableTotalLoss2D loss wrapper class for applying latititude or variable weights
+INFO:credit.losses.weighted_loss:Using latitude weights in loss calculations
+INFO:credit.losses.weighted_loss:Using latitude weights in loss calculations
+INFO:credit.losses.weighted_loss:Using latitude weights in loss calculations
+INFO:credit.losses:Loaded the VariableTotalLoss2D loss wrapper class for applying latititude or variable weights
+INFO:credit.losses.weighted_loss:Using latitude weights in loss calculations
+INFO:credit.losses:Loaded the VariableTotalLoss2D loss wrapper class for applying latititude or variable weights
+INFO:credit.losses.weighted_loss:Using latitude weights in loss calculations
+INFO:credit.trainers:Loading a single or multi-step trainer for the ERA5 dataset that uses gradient accumulation on forecast lengths > 1.
+INFO:credit.trainers.trainerERA5:Loading a multi-step trainer class
+INFO:credit.trainers.base_trainer:The training metric being used is valid_loss which has direction min
+INFO:credit.trainers.base_trainer:The current job will run 20 epochs max
+INFO:credit.trainers.base_trainer:Beginning epoch 0
+INFO:credit.trainers.trainerERA5:Using grad-max-norm value: dynamic
+INFO:credit.trainers:Loading a single or multi-step trainer for the ERA5 dataset that uses gradient accumulation on forecast lengths > 1.
+INFO:credit.trainers:Loading a single or multi-step trainer for the ERA5 dataset that uses gradient accumulation on forecast lengths > 1.
+INFO:credit.trainers.trainerERA5:Loading a multi-step trainer class
+INFO:credit.trainers.trainerERA5:Loading a multi-step trainer class
+INFO:credit.trainers.base_trainer:The training metric being used is valid_loss which has direction min
+INFO:credit.trainers.base_trainer:The current job will run 20 epochs max
+INFO:credit.trainers.base_trainer:The training metric being used is valid_loss which has direction min
+INFO:credit.trainers.base_trainer:The current job will run 20 epochs max
+INFO:credit.trainers.base_trainer:Beginning epoch 0
+INFO:credit.trainers.base_trainer:Beginning epoch 0
+INFO:credit.trainers:Loading a single or multi-step trainer for the ERA5 dataset that uses gradient accumulation on forecast lengths > 1.
+INFO:credit.trainers.trainerERA5:Using grad-max-norm value: dynamic
+INFO:credit.trainers:Loading a single or multi-step trainer for the ERA5 dataset that uses gradient accumulation on forecast lengths > 1.
+INFO:credit.trainers.trainerERA5:Using grad-max-norm value: dynamic
+INFO:credit.trainers.trainerERA5:Loading a multi-step trainer class
+INFO:credit.trainers.base_trainer:The training metric being used is valid_loss which has direction min
+INFO:credit.trainers.trainerERA5:Loading a multi-step trainer class
+INFO:credit.trainers.base_trainer:The current job will run 20 epochs max
+INFO:credit.trainers.base_trainer:The training metric being used is valid_loss which has direction min
+INFO:credit.trainers.base_trainer:Beginning epoch 0
+INFO:credit.trainers.base_trainer:The current job will run 20 epochs max
+INFO:credit.trainers.base_trainer:Beginning epoch 0
+INFO:credit.trainers:Loading a single or multi-step trainer for the ERA5 dataset that uses gradient accumulation on forecast lengths > 1.
+INFO:credit.trainers.trainerERA5:Using grad-max-norm value: dynamic
+INFO:credit.trainers.trainerERA5:Using grad-max-norm value: dynamic
+INFO:credit.trainers.trainerERA5:Loading a multi-step trainer class
+INFO:credit.trainers.base_trainer:The training metric being used is valid_loss which has direction min
+INFO:credit.trainers.base_trainer:The current job will run 20 epochs max
+INFO:credit.trainers.base_trainer:Beginning epoch 0
+INFO:credit.trainers.trainerERA5:Using grad-max-norm value: dynamic
+INFO:credit.trainers:Loading a single or multi-step trainer for the ERA5 dataset that uses gradient accumulation on forecast lengths > 1.
+INFO:credit.trainers.trainerERA5:Loading a multi-step trainer class
+  0%|          | 0/179 [00:00<?, ?it/s]INFO:credit.trainers.base_trainer:The training metric being used is valid_loss which has direction min
+INFO:credit.trainers.base_trainer:The current job will run 20 epochs max
+INFO:credit.trainers.base_trainer:Beginning epoch 0
+  0%|          | 0/179 [00:00<?, ?it/s]INFO:credit.trainers.trainerERA5:Using grad-max-norm value: dynamic
+  0%|          | 0/179 [00:00<?, ?it/s]  0%|          | 0/179 [00:00<?, ?it/s]  0%|          | 0/179 [00:00<?, ?it/s]  0%|          | 0/179 [00:00<?, ?it/s]INFO:credit.trainers:Loading a single or multi-step trainer for the ERA5 dataset that uses gradient accumulation on forecast lengths > 1.
+INFO:credit.trainers.trainerERA5:Loading a multi-step trainer class
+INFO:credit.trainers.base_trainer:The training metric being used is valid_loss which has direction min
+INFO:credit.trainers.base_trainer:The current job will run 20 epochs max
+INFO:credit.trainers.base_trainer:Beginning epoch 0
+INFO:credit.trainers.trainerERA5:Using grad-max-norm value: dynamic
+  0%|          | 0/179 [00:00<?, ?it/s]  0%|          | 0/179 [00:00<?, ?it/s]2026-04-10 15:07:53,911 - INFO - [GapAware] index=361 -> file_id=0, time_idx=366, global_index=366 | input=2006-04-04T18:00:00, target=2006-04-05T00:00:00, dt=6.0h
+2026-04-10 15:07:53,913 - INFO - [GapAware] index=1358 -> file_id=0, time_idx=1365, global_index=1365 | input=2006-12-11T12:00:00, target=2006-12-11T18:00:00, dt=6.0h
+2026-04-10 15:07:53,990 - INFO - [GapAware] index=624 -> file_id=0, time_idx=631, global_index=631 | input=2006-06-11T00:00:00, target=2006-06-11T06:00:00, dt=6.0h
+2026-04-10 15:07:53,991 - INFO - [GapAware] index=170 -> file_id=0, time_idx=175, global_index=175 | input=2006-02-16T00:00:00, target=2006-02-16T06:00:00, dt=6.0h
+2026-04-10 15:07:54,477 - INFO - [GapAware] index=828 -> file_id=0, time_idx=835, global_index=835 | input=2006-08-01T00:00:00, target=2006-08-01T06:00:00, dt=6.0h
+2026-04-10 15:07:54,480 - INFO - [GapAware] index=92 -> file_id=0, time_idx=97, global_index=97 | input=2006-01-27T12:00:00, target=2006-01-27T18:00:00, dt=6.0h
+2026-04-10 15:07:54,775 - INFO - [GapAware] index=1408 -> file_id=0, time_idx=1415, global_index=1415 | input=2006-12-24T00:00:00, target=2006-12-24T06:00:00, dt=6.0h
+2026-04-10 15:07:54,778 - INFO - [GapAware] index=143 -> file_id=0, time_idx=148, global_index=148 | input=2006-02-09T06:00:00, target=2006-02-09T12:00:00, dt=6.0h
+2026-04-10 15:07:54,977 - INFO - [GapAware] index=980 -> file_id=0, time_idx=987, global_index=987 | input=2006-09-08T00:00:00, target=2006-09-08T06:00:00, dt=6.0h
+2026-04-10 15:07:54,994 - INFO - [GapAware] index=1306 -> file_id=0, time_idx=1313, global_index=1313 | input=2006-11-28T12:00:00, target=2006-11-28T18:00:00, dt=6.0h
+2026-04-10 15:07:55,786 - INFO - [GapAware] index=1115 -> file_id=0, time_idx=1122, global_index=1122 | input=2006-10-11T18:00:00, target=2006-10-12T00:00:00, dt=6.0h
+2026-04-10 15:07:55,796 - INFO - [GapAware] index=487 -> file_id=0, time_idx=493, global_index=493 | input=2006-05-07T00:00:00, target=2006-05-07T06:00:00, dt=6.0h
+2026-04-10 15:07:55,849 - INFO - [GapAware] index=327 -> file_id=0, time_idx=332, global_index=332 | input=2006-03-27T06:00:00, target=2006-03-27T12:00:00, dt=6.0h
+2026-04-10 15:07:55,860 - INFO - [GapAware] index=1012 -> file_id=0, time_idx=1019, global_index=1019 | input=2006-09-16T00:00:00, target=2006-09-16T06:00:00, dt=6.0h
+2026-04-10 15:07:55,939 - INFO - [GapAware] index=763 -> file_id=0, time_idx=770, global_index=770 | input=2006-07-15T18:00:00, target=2006-07-16T00:00:00, dt=6.0h
+2026-04-10 15:07:55,954 - INFO - [GapAware] index=1402 -> file_id=0, time_idx=1409, global_index=1409 | input=2006-12-22T12:00:00, target=2006-12-22T18:00:00, dt=6.0h
+2026-04-10 15:07:59,260 - INFO - [GapAware] index=361 -> sample datetime=[1144173600, 1144195200]
+2026-04-10 15:07:59,410 - INFO - [GapAware] index=385 -> file_id=0, time_idx=390, global_index=390 | input=2006-04-10T18:00:00, target=2006-04-11T00:00:00, dt=6.0h
+2026-04-10 15:07:59,996 - INFO - [GapAware] index=1358 -> sample datetime=[1165838400, 1165860000]
+2026-04-10 15:08:00,136 - INFO - [GapAware] index=170 -> sample datetime=[1140048000, 1140069600]
+2026-04-10 15:08:00,184 - INFO - [GapAware] index=1078 -> file_id=0, time_idx=1085, global_index=1085 | input=2006-10-02T12:00:00, target=2006-10-02T18:00:00, dt=6.0h
+2026-04-10 15:08:00,316 - INFO - [GapAware] index=624 -> sample datetime=[1149984000, 1150005600]
+2026-04-10 15:08:00,328 - INFO - [GapAware] index=443 -> file_id=0, time_idx=448, global_index=448 | input=2006-04-25T06:00:00, target=2006-04-25T12:00:00, dt=6.0h
+2026-04-10 15:08:00,464 - INFO - [GapAware] index=699 -> file_id=0, time_idx=706, global_index=706 | input=2006-06-29T18:00:00, target=2006-06-30T00:00:00, dt=6.0h
+2026-04-10 15:08:01,420 - INFO - [GapAware] index=92 -> sample datetime=[1138363200, 1138384800]
+x1 shape:  torch.Size([1, 1, 4, 16, 640, 1280])
+x2 shape:  torch.Size([1, 1, 7, 640, 1280])
+2026-04-10 15:08:01,617 - INFO - [GapAware] index=546 -> file_id=0, time_idx=552, global_index=552 | input=2006-05-21T18:00:00, target=2006-05-22T00:00:00, dt=6.0h
+2026-04-10 15:08:01,712 - INFO - [GapAware] index=828 -> sample datetime=[1154390400, 1154412000]
+2026-04-10 15:08:01,881 - INFO - [GapAware] index=1206 -> file_id=0, time_idx=1213, global_index=1213 | input=2006-11-03T12:00:00, target=2006-11-03T18:00:00, dt=6.0h
+x1 shape:  torch.Size([1, 1, 4, 16, 640, 1280])
+x2 shape:  torch.Size([1, 1, 7, 640, 1280])
+2026-04-10 15:08:02,662 - INFO - [GapAware] index=980 -> sample datetime=[1157673600, 1157695200]
+2026-04-10 15:08:02,759 - INFO - [GapAware] index=143 -> sample datetime=[1139464800, 1139486400]
+2026-04-10 15:08:02,846 - INFO - [GapAware] index=377 -> file_id=0, time_idx=382, global_index=382 | input=2006-04-08T18:00:00, target=2006-04-09T00:00:00, dt=6.0h
+2026-04-10 15:08:02,925 - INFO - [GapAware] index=907 -> file_id=0, time_idx=914, global_index=914 | input=2006-08-20T18:00:00, target=2006-08-21T00:00:00, dt=6.0h
+2026-04-10 15:08:03,144 - INFO - [GapAware] index=487 -> sample datetime=[1146960000, 1146981600]
+2026-04-10 15:08:03,179 - INFO - [GapAware] index=1408 -> sample datetime=[1166918400, 1166940000]
+2026-04-10 15:08:03,305 - INFO - [GapAware] index=700 -> file_id=0, time_idx=707, global_index=707 | input=2006-06-30T00:00:00, target=2006-06-30T06:00:00, dt=6.0h
+2026-04-10 15:08:03,322 - INFO - [GapAware] index=557 -> file_id=0, time_idx=563, global_index=563 | input=2006-05-24T12:00:00, target=2006-05-24T18:00:00, dt=6.0h
+2026-04-10 15:08:03,324 - INFO - [GapAware] index=1306 -> sample datetime=[1164715200, 1164736800]
+2026-04-10 15:08:03,386 - INFO - [GapAware] index=327 -> sample datetime=[1143439200, 1143460800]
+2026-04-10 15:08:03,522 - INFO - [GapAware] index=1230 -> file_id=0, time_idx=1237, global_index=1237 | input=2006-11-09T12:00:00, target=2006-11-09T18:00:00, dt=6.0h
+2026-04-10 15:08:03,828 - INFO - [GapAware] index=804 -> file_id=0, time_idx=811, global_index=811 | input=2006-07-26T00:00:00, target=2006-07-26T06:00:00, dt=6.0h
+2026-04-10 15:08:04,807 - INFO - [GapAware] index=1012 -> sample datetime=[1158364800, 1158386400]
+2026-04-10 15:08:04,808 - INFO - [GapAware] index=1115 -> sample datetime=[1160589600, 1160611200]
+2026-04-10 15:08:04,981 - INFO - [GapAware] index=1149 -> file_id=0, time_idx=1156, global_index=1156 | input=2006-10-20T06:00:00, target=2006-10-20T12:00:00, dt=6.0h
+2026-04-10 15:08:04,982 - INFO - [GapAware] index=420 -> file_id=0, time_idx=425, global_index=425 | input=2006-04-19T12:00:00, target=2006-04-19T18:00:00, dt=6.0h
+x1 shape:  torch.Size([1, 1, 4, 16, 640, 1280])
+x2 shape:  torch.Size([1, 1, 7, 640, 1280])
+2026-04-10 15:08:05,683 - INFO - [GapAware] index=1402 -> sample datetime=[1166788800, 1166810400]
+2026-04-10 15:08:05,850 - INFO - [GapAware] index=385 -> sample datetime=[1144692000, 1144713600]
+x1 shape:  torch.Size([1, 1, 4, 16, 640, 1280])
+x2 shape:  torch.Size([1, 1, 7, 640, 1280])
+2026-04-10 15:08:06,020 - INFO - [GapAware] index=763 -> sample datetime=[1152986400, 1153008000]
+2026-04-10 15:08:06,039 - INFO - [GapAware] index=687 -> file_id=0, time_idx=694, global_index=694 | input=2006-06-26T18:00:00, target=2006-06-27T00:00:00, dt=6.0h
+2026-04-10 15:08:06,160 - INFO - [GapAware] index=640 -> file_id=0, time_idx=647, global_index=647 | input=2006-06-15T00:00:00, target=2006-06-15T06:00:00, dt=6.0h
+2026-04-10 15:08:06,326 - INFO - [GapAware] index=731 -> file_id=0, time_idx=738, global_index=738 | input=2006-07-07T18:00:00, target=2006-07-08T00:00:00, dt=6.0h
+x1 shape:  torch.Size([1, 1, 4, 16, 640, 1280])
+x2 shape:  torch.Size([1, 1, 7, 640, 1280])
+2026-04-10 15:08:06,888 - INFO - [GapAware] index=443 -> sample datetime=[1145944800, 1145966400]
+x1 shape:  torch.Size([1, 1, 4, 16, 640, 1280])
+x2 shape:  torch.Size([1, 1, 7, 640, 1280])
+2026-04-10 15:08:07,363 - INFO - [GapAware] index=1078 -> sample datetime=[1159790400, 1159812000]
+2026-04-10 15:08:07,964 - INFO - [GapAware] index=699 -> sample datetime=[1151604000, 1151625600]
+2026-04-10 15:08:08,118 - INFO - [GapAware] index=617 -> file_id=0, time_idx=624, global_index=624 | input=2006-06-09T06:00:00, target=2006-06-09T12:00:00, dt=6.0h
+x1 shape:  torch.Size([1, 1, 4, 16, 640, 1280])
+x2 shape:  torch.Size([1, 1, 7, 640, 1280])
+x1 shape:  torch.Size([1, 1, 4, 16, 640, 1280])
+x2 shape:  torch.Size([1, 1, 7, 640, 1280])
+2026-04-10 15:08:09,292 - INFO - [GapAware] index=377 -> sample datetime=[1144519200, 1144540800]
+2026-04-10 15:08:09,294 - INFO - [GapAware] index=546 -> sample datetime=[1148234400, 1148256000]
+2026-04-10 15:08:09,428 - INFO - [GapAware] index=189 -> file_id=0, time_idx=194, global_index=194 | input=2006-02-20T18:00:00, target=2006-02-21T00:00:00, dt=6.0h
+2026-04-10 15:08:09,455 - INFO - [GapAware] index=1206 -> sample datetime=[1162555200, 1162576800]
+2026-04-10 15:08:09,525 - INFO - [GapAware] index=700 -> sample datetime=[1151625600, 1151647200]
+2026-04-10 15:08:09,694 - INFO - [GapAware] index=920 -> file_id=0, time_idx=927, global_index=927 | input=2006-08-24T00:00:00, target=2006-08-24T06:00:00, dt=6.0h
+2026-04-10 15:08:10,033 - INFO - [GapAware] index=907 -> sample datetime=[1156096800, 1156118400]
+2026-04-10 15:08:10,481 - INFO - [GapAware] index=804 -> sample datetime=[1153872000, 1153893600]
+2026-04-10 15:08:10,514 - INFO - [GapAware] index=1230 -> sample datetime=[1163073600, 1163095200]
+2026-04-10 15:08:10,717 - INFO - [GapAware] index=1297 -> file_id=0, time_idx=1304, global_index=1304 | input=2006-11-26T06:00:00, target=2006-11-26T12:00:00, dt=6.0h
+2026-04-10 15:08:10,859 - INFO - [GapAware] index=1149 -> sample datetime=[1161324000, 1161345600]
+2026-04-10 15:08:10,891 - INFO - [GapAware] index=557 -> sample datetime=[1148472000, 1148493600]
+x1 shape:  torch.Size([1, 1, 4, 16, 640, 1280])
+x2 shape:  torch.Size([1, 1, 7, 640, 1280])
+x1 shape:  torch.Size([1, 1, 4, 16, 640, 1280])
+x2 shape:  torch.Size([1, 1, 7, 640, 1280])
+2026-04-10 15:08:11,020 - INFO - [GapAware] index=201 -> file_id=0, time_idx=206, global_index=206 | input=2006-02-23T18:00:00, target=2006-02-24T00:00:00, dt=6.0h
+2026-04-10 15:08:11,063 - INFO - [GapAware] index=1419 -> file_id=0, time_idx=1426, global_index=1426 | input=2006-12-26T18:00:00, target=2006-12-27T00:00:00, dt=6.0h
+x1 shape:  torch.Size([1, 1, 4, 16, 640, 1280])
+x2 shape:  torch.Size([1, 1, 7, 640, 1280])
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 500, in <module>
+[rank6]:     main_cli()
+[rank6]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 496, in main_cli
+[rank6]:     main(world_rank, world_size, conf, backend)
+[rank6]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 337, in main
+[rank6]:     result = trainer.fit(
+[rank6]:              ^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/trainers/base_trainer.py", line 313, in fit
+[rank6]:     train_results = self.train_one_epoch(
+[rank6]:                     ^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/trainers/trainerERA5.py", line 287, in train_one_epoch
+[rank6]:     loss = criterion(y.to(y_pred.dtype), y_pred).mean()
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/weighted_loss.py", line 214, in forward
+[rank6]:     loss = self.loss_fn(target, pred)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 358, in forward
+[rank6]:     predicted_noise = self.denoiser(yk, backbone_features, k)
+[rank6]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 235, in forward
+[rank6]:     t_emb = self.time_emb(k)
+[rank6]:             ^^^^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 120, in forward
+[rank6]:     return self.mlp(emb)
+[rank6]:            ^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/container.py", line 250, in forward
+[rank6]:     input = module(input)
+[rank6]:             ^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank6]:     return self._call_impl(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank6]:     return forward_call(*args, **kwargs)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank6]:     return F.linear(input, self.weight, self.bias)
+[rank6]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank6]: RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:6! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 500, in <module>
+[rank2]:     main_cli()
+[rank2]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 496, in main_cli
+[rank2]:     main(world_rank, world_size, conf, backend)
+[rank2]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 337, in main
+[rank2]:     result = trainer.fit(
+[rank2]:              ^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/trainers/base_trainer.py", line 313, in fit
+[rank2]:     train_results = self.train_one_epoch(
+[rank2]:                     ^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/trainers/trainerERA5.py", line 287, in train_one_epoch
+[rank2]:     loss = criterion(y.to(y_pred.dtype), y_pred).mean()
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/weighted_loss.py", line 214, in forward
+[rank2]:     loss = self.loss_fn(target, pred)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 358, in forward
+[rank2]:     predicted_noise = self.denoiser(yk, backbone_features, k)
+[rank2]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 235, in forward
+[rank2]:     t_emb = self.time_emb(k)
+[rank2]:             ^^^^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 120, in forward
+[rank2]:     return self.mlp(emb)
+[rank2]:            ^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/container.py", line 250, in forward
+[rank2]:     input = module(input)
+[rank2]:             ^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank2]:     return self._call_impl(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank2]:     return forward_call(*args, **kwargs)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank2]:     return F.linear(input, self.weight, self.bias)
+[rank2]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank2]: RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:2! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 500, in <module>
+[rank3]:     main_cli()
+[rank3]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 496, in main_cli
+[rank3]:     main(world_rank, world_size, conf, backend)
+[rank3]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 337, in main
+[rank3]:     result = trainer.fit(
+[rank3]:              ^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/trainers/base_trainer.py", line 313, in fit
+[rank3]:     train_results = self.train_one_epoch(
+[rank3]:                     ^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/trainers/trainerERA5.py", line 287, in train_one_epoch
+[rank3]:     loss = criterion(y.to(y_pred.dtype), y_pred).mean()
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/weighted_loss.py", line 214, in forward
+[rank3]:     loss = self.loss_fn(target, pred)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 358, in forward
+[rank3]:     predicted_noise = self.denoiser(yk, backbone_features, k)
+[rank3]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 235, in forward
+[rank3]:     t_emb = self.time_emb(k)
+[rank3]:             ^^^^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 120, in forward
+[rank3]:     return self.mlp(emb)
+[rank3]:            ^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/container.py", line 250, in forward
+[rank3]:     input = module(input)
+[rank3]:             ^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank3]:     return self._call_impl(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank3]:     return forward_call(*args, **kwargs)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank3]:     return F.linear(input, self.weight, self.bias)
+[rank3]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank3]: RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:3! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)
+x1 shape:  torch.Size([1, 1, 4, 16, 640, 1280])
+x2 shape:  torch.Size([1, 1, 7, 640, 1280])
+x1 shape:  torch.Size([1, 1, 4, 16, 640, 1280])
+x2 shape:  torch.Size([1, 1, 7, 640, 1280])
+x1 shape:  torch.Size([1, 1, 4, 16, 640, 1280])
+x2 shape:  torch.Size([1, 1, 7, 640, 1280])
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 500, in <module>
+[rank7]:     main_cli()
+[rank7]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 496, in main_cli
+[rank7]:     main(world_rank, world_size, conf, backend)
+[rank7]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 337, in main
+[rank7]:     result = trainer.fit(
+[rank7]:              ^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/trainers/base_trainer.py", line 313, in fit
+[rank7]:     train_results = self.train_one_epoch(
+[rank7]:                     ^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/trainers/trainerERA5.py", line 287, in train_one_epoch
+[rank7]:     loss = criterion(y.to(y_pred.dtype), y_pred).mean()
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/weighted_loss.py", line 214, in forward
+[rank7]:     loss = self.loss_fn(target, pred)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 358, in forward
+[rank7]:     predicted_noise = self.denoiser(yk, backbone_features, k)
+[rank7]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 235, in forward
+[rank7]:     t_emb = self.time_emb(k)
+[rank7]:             ^^^^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 120, in forward
+[rank7]:     return self.mlp(emb)
+[rank7]:            ^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/container.py", line 250, in forward
+[rank7]:     input = module(input)
+[rank7]:             ^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank7]:     return self._call_impl(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank7]:     return forward_call(*args, **kwargs)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank7]:     return F.linear(input, self.weight, self.bias)
+[rank7]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank7]: RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:7! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)
+x1 shape:  torch.Size([1, 1, 4, 16, 640, 1280])
+x2 shape:  torch.Size([1, 1, 7, 640, 1280])
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 500, in <module>
+[rank5]:     main_cli()
+[rank5]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 496, in main_cli
+[rank5]:     main(world_rank, world_size, conf, backend)
+[rank5]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 337, in main
+[rank5]:     result = trainer.fit(
+[rank5]:              ^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/trainers/base_trainer.py", line 313, in fit
+[rank5]:     train_results = self.train_one_epoch(
+[rank5]:                     ^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/trainers/trainerERA5.py", line 287, in train_one_epoch
+[rank5]:     loss = criterion(y.to(y_pred.dtype), y_pred).mean()
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/weighted_loss.py", line 214, in forward
+[rank5]:     loss = self.loss_fn(target, pred)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 358, in forward
+[rank5]:     predicted_noise = self.denoiser(yk, backbone_features, k)
+[rank5]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 235, in forward
+[rank5]:     t_emb = self.time_emb(k)
+[rank5]:             ^^^^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 120, in forward
+[rank5]:     return self.mlp(emb)
+[rank5]:            ^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/container.py", line 250, in forward
+[rank5]:     input = module(input)
+[rank5]:             ^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank5]:     return self._call_impl(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank5]:     return forward_call(*args, **kwargs)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank5]:     return F.linear(input, self.weight, self.bias)
+[rank5]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank5]: RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:5! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 500, in <module>
+[rank4]:     main_cli()
+[rank4]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 496, in main_cli
+[rank4]:     main(world_rank, world_size, conf, backend)
+[rank4]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 337, in main
+[rank4]:     result = trainer.fit(
+[rank4]:              ^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/trainers/base_trainer.py", line 313, in fit
+[rank4]:     train_results = self.train_one_epoch(
+[rank4]:                     ^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/trainers/trainerERA5.py", line 287, in train_one_epoch
+[rank4]:     loss = criterion(y.to(y_pred.dtype), y_pred).mean()
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/weighted_loss.py", line 214, in forward
+[rank4]:     loss = self.loss_fn(target, pred)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 358, in forward
+[rank4]:     predicted_noise = self.denoiser(yk, backbone_features, k)
+[rank4]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 235, in forward
+[rank4]:     t_emb = self.time_emb(k)
+[rank4]:             ^^^^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 120, in forward
+[rank4]:     return self.mlp(emb)
+[rank4]:            ^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/container.py", line 250, in forward
+[rank4]:     input = module(input)
+[rank4]:             ^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank4]:     return self._call_impl(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank4]:     return forward_call(*args, **kwargs)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank4]:     return F.linear(input, self.weight, self.bias)
+[rank4]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank4]: RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:4! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 500, in <module>
+[rank1]:     main_cli()
+[rank1]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 496, in main_cli
+[rank1]:     main(world_rank, world_size, conf, backend)
+[rank1]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 337, in main
+[rank1]:     result = trainer.fit(
+[rank1]:              ^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/trainers/base_trainer.py", line 313, in fit
+[rank1]:     train_results = self.train_one_epoch(
+[rank1]:                     ^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/trainers/trainerERA5.py", line 287, in train_one_epoch
+[rank1]:     loss = criterion(y.to(y_pred.dtype), y_pred).mean()
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/weighted_loss.py", line 214, in forward
+[rank1]:     loss = self.loss_fn(target, pred)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 358, in forward
+[rank1]:     predicted_noise = self.denoiser(yk, backbone_features, k)
+[rank1]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 235, in forward
+[rank1]:     t_emb = self.time_emb(k)
+[rank1]:             ^^^^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 120, in forward
+[rank1]:     return self.mlp(emb)
+[rank1]:            ^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/container.py", line 250, in forward
+[rank1]:     input = module(input)
+[rank1]:             ^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank1]:     return self._call_impl(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank1]:     return forward_call(*args, **kwargs)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank1]:     return F.linear(input, self.weight, self.bias)
+[rank1]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank1]: RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:1! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)
+2026-04-10 15:08:11,648 - INFO - [GapAware] index=640 -> sample datetime=[1150329600, 1150351200]
+2026-04-10 15:08:11,745 - INFO - [GapAware] index=420 -> sample datetime=[1145448000, 1145469600]
+x1 shape:  torch.Size([1, 1, 4, 16, 640, 1280])
+x2 shape:  torch.Size([1, 1, 7, 640, 1280])
+2026-04-10 15:08:11,890 - INFO - [GapAware] index=731 -> sample datetime=[1152295200, 1152316800]
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 500, in <module>
+[rank0]:     main_cli()
+[rank0]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 496, in main_cli
+[rank0]:     main(world_rank, world_size, conf, backend)
+[rank0]:   File "/GPU/nwpr/ait/com181/work/miles-credit/applications/train.py", line 337, in main
+[rank0]:     result = trainer.fit(
+[rank0]:              ^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/trainers/base_trainer.py", line 313, in fit
+[rank0]:     train_results = self.train_one_epoch(
+[rank0]:                     ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/trainers/trainerERA5.py", line 287, in train_one_epoch
+[rank0]:     loss = criterion(y.to(y_pred.dtype), y_pred).mean()
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/weighted_loss.py", line 214, in forward
+[rank0]:     loss = self.loss_fn(target, pred)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 358, in forward
+[rank0]:     predicted_noise = self.denoiser(yk, backbone_features, k)
+[rank0]:                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 235, in forward
+[rank0]:     t_emb = self.time_emb(k)
+[rank0]:             ^^^^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/com181/work/miles-credit/credit/losses/seg_diffusion_loss.py", line 120, in forward
+[rank0]:     return self.mlp(emb)
+[rank0]:            ^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/container.py", line 250, in forward
+[rank0]:     input = module(input)
+[rank0]:             ^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 125, in forward
+[rank0]:     return F.linear(input, self.weight, self.bias)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)
+2026-04-10 15:08:12,054 - INFO - [GapAware] index=208 -> file_id=0, time_idx=213, global_index=213 | input=2006-02-25T12:00:00, target=2006-02-25T18:00:00, dt=6.0h
+2026-04-10 15:08:12,127 - INFO - [GapAware] index=687 -> sample datetime=[1151344800, 1151366400]
+2026-04-10 15:08:12,730 - INFO - [GapAware] index=617 -> sample datetime=[1149832800, 1149854400]
+2026-04-10 15:08:13,751 - INFO - [GapAware] index=189 -> sample datetime=[1140458400, 1140480000]
+2026-04-10 15:08:13,899 - INFO - [GapAware] index=920 -> sample datetime=[1156377600, 1156399200]
+2026-04-10 15:08:14,404 - INFO - [GapAware] index=201 -> sample datetime=[1140717600, 1140739200]
+2026-04-10 15:08:14,418 - INFO - [GapAware] index=1297 -> sample datetime=[1164520800, 1164542400]
+2026-04-10 15:08:14,649 - INFO - [GapAware] index=1419 -> sample datetime=[1167156000, 1167177600]
+2026-04-10 15:08:14,849 - INFO - [GapAware] index=208 -> sample datetime=[1140868800, 1140890400]
+  0%|          | 0/179 [00:47<?, ?it/s]
+  0%|          | 0/179 [00:47<?, ?it/s]
+  0%|          | 0/179 [00:47<?, ?it/s]
+  0%|          | 0/179 [00:47<?, ?it/s]
+  0%|          | 0/179 [00:47<?, ?it/s]
+  0%|          | 0/179 [00:47<?, ?it/s]
+  0%|          | 0/179 [00:47<?, ?it/s]
+  0%|          | 0/179 [00:48<?, ?it/s]
+[rank0]:[W410 15:08:22.040329150 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0410 15:08:25.066000 434211 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 434246 closing signal SIGTERM
+W0410 15:08:25.066000 434211 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 434247 closing signal SIGTERM
+W0410 15:08:25.067000 434211 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 434248 closing signal SIGTERM
+W0410 15:08:25.067000 434211 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 434250 closing signal SIGTERM
+W0410 15:08:25.067000 434211 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 434251 closing signal SIGTERM
+W0410 15:08:25.068000 434211 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 434253 closing signal SIGTERM
+E0410 15:08:27.848000 434211 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 3 (pid: 434249) of binary: /GPU/nwpr/ait/p088/miniforge3/envs/credit/bin/python3.12
+Traceback (most recent call last):
+  File "/nwpr/ait/p088/miniforge3/envs/credit/bin/torchrun", line 7, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/GPU/nwpr/ait/p088/miniforge3/envs/credit/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+applications/train.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-04-10_15:08:25
+  host      : gcn04
+  rank      : 6 (local_rank: 6)
+  exitcode  : 1 (pid: 434252)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-04-10_15:08:25
+  host      : gcn04
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 434249)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

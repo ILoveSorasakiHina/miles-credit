@@ -35,12 +35,15 @@ def load_loss(conf, reduction="none", validation=False):
         ValueError: If the requested loss type is not recognized in `available_losses`.
     """
     loss_conf = conf["loss"]
+    
+    # Diffusion loss handles everything internally, skip wrapper
+    loss_type = loss_conf.get("training_loss")
+    if loss_type == "diffusion":
+        return base_losses(conf, reduction=reduction, validation=False)  # 永遠用 training_loss
+    
     use_weighted_loss = loss_conf.get("use_latitude_weights", False) or loss_conf.get("use_variable_weights", False)
-
+    
     if use_weighted_loss:
-        logger.info("Loaded the VariableTotalLoss2D loss wrapper class for applying latititude or variable weights")
         return VariableTotalLoss2D(conf, validation=validation)
-
-    # Select loss type for training or validation
-
+    
     return base_losses(conf, reduction=reduction, validation=validation)

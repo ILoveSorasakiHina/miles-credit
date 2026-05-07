@@ -121,4 +121,31 @@ Q500:
     short_name: "q500"
     units: "kg kg**-1"
     _FillValue: 9.999e+20
-  
+
+u10m:
+    standard_name: "10 meter U component of wind"
+    long_name: "eastward_wind"
+    short_name: "10u"
+    units: "m s**-1"
+    _FillValue: 9.999e+20
+
+v10m:
+    standard_name: "10 meter V component of wind"
+    long_name: "northward_wind"
+    short_name: "10v"
+    units: "m s**-1"
+    _FillValue: 9.999e+20
+
+U850:
+    long_name: "U component of wind (at 850 hPa)"
+    standard_name: "eastward_wind"
+    short_name: "u850"
+    units: "m s**-1"
+    _FillValue: 9.999e+20
+
+V850:
+    long_name: "V component of wind (at 850 hPa)"
+    standard_name: "northward_wind"
+    short_name: "v850"
+    units: "m s**-1"
+    _FillValue: 9.999e+20

@@ -35,7 +35,6 @@ class ERA5_and_Forcing_SingleStep(ERA5_and_Forcing_Dataset):
         ERA5_subset = self.all_files[int(ind_file)].isel(
             time=slice(ind_start_in_file, ind_end_in_file + 1)
         )  # .load() NOT load into memory
-
         # merge surface into the dataset
 
         if self.surface_files:
@@ -65,15 +64,16 @@ class ERA5_and_Forcing_SingleStep(ERA5_and_Forcing_Dataset):
 
         # merge dynamic forcing inputs
         if self.dyn_forcing_files:
-            dyn_forcing_subset = self.dyn_forcing_files[int(ind_file)].isel(
-                time=slice(ind_start_in_file, ind_end_in_file + 1)
-            )
-            dyn_forcing_subset = dyn_forcing_subset.isel(
-                time=slice(0, self.history_len, self.skip_periods)
-            ).load()  # <-- load into memory
+            # 用實際時間去配對，而不是用 index
+            target_times = historical_ERA5_images["time"].values
+            dyn_forcing_subset = self.dyn_forcing_files[int(ind_file)].sel(
+                time=target_times, method="nearest"
+            ).load()
+
+            # 強制對齊時間座標，避免 merge outer join
+            dyn_forcing_subset["time"] = historical_ERA5_images["time"]
 
             historical_ERA5_images = historical_ERA5_images.merge(dyn_forcing_subset)
-
         # merge forcing inputs
         if self.xarray_forcing:
             # ------------------------------------------------------------------------------- #

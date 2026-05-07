@@ -1,0 +1,20 @@
+{
+  "total_files": 1,
+  "history_len": 1,
+  "forecast_len": 6,
+  "window_size": 8,
+  "window_n_diffs": 7,
+  "expected_interval_h": 6,
+  "total_possible_windows": 1440,
+  "total_valid_windows": 1399,
+  "total_dropped": 41,
+  "drop_rate": "2.85%",
+  "global_gap_summary": {
+    "12.0h": 3,
+    "24.0h": 2,
+    "18.0h": 2
+  },
+  "filenames": [
+    "SixHourly_y_TOTAL_2006-01-01_2006-12-31_staged_miss.zarr"
+  ]
+}
