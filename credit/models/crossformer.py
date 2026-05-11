@@ -376,6 +376,7 @@ class CrossFormer(BaseModel):
         image_width: int = 1280,
         patch_width: int = 1,
         frames: int = 2,
+        output_frames: int = 1,
         channels: int = 4,
         surface_channels: int = 7,
         input_only_channels: int = 3,
@@ -409,6 +410,7 @@ class CrossFormer(BaseModel):
             image_width (int): number of grid cells in the west-east direction.
             patch_width (int): number of grid cells within each patch in the west-east direction.
             frames (int): number of time steps being used as input
+            output_frames (int): number of future time steps to predict in a single forward pass. Default is 1.
             channels (int): number of 3D variables. Default is 4 for our ERA5 configuration (U, V, T, and Q)
             surface_channels (int): number of surface (single-level) variables.
             input_only_channels (int): number of variables only used as input to the ML model (e.g., forcing variables)
@@ -443,6 +445,7 @@ class CrossFormer(BaseModel):
         self.patch_width = patch_width
         self.upsample_v_conv = upsample_v_conv
         self.frames = frames
+        self.output_frames = output_frames
         self.channels = channels
         self.surface_channels = surface_channels
         self.levels = levels
@@ -458,12 +461,18 @@ class CrossFormer(BaseModel):
 
         # input channels
         self.input_only_channels = input_only_channels
-        input_channels = channels * levels + surface_channels + input_only_channels
-        self.input_channels = input_channels
+        # base_input_channels: channels per single timestep
+        # When frames > 1, the time dimension is concatenated into the channel
+        # dimension in forward(), so input_channels must be multiplied by frames.
+        self.base_input_channels = channels * levels + surface_channels + input_only_channels
+        self.input_channels = self.base_input_channels * frames
 
         # output channels
-        output_channels = channels * levels + surface_channels + output_only_channels
-        self.output_channels = output_channels
+        # base_output_channels: channels per single output timestep.
+        # When output_frames > 1, the model predicts multiple future timesteps and
+        # output_channels must be multiplied by output_frames.
+        self.base_output_channels = channels * levels + surface_channels + output_only_channels
+        self.output_channels = self.base_output_channels * output_frames
 
         if kwargs.get("diffusion"):
             # do stuff
@@ -599,7 +608,10 @@ class CrossFormer(BaseModel):
         if self.patch_width > 1 and self.patch_height > 1:
             x = self.cube_embedding(x)
         elif self.frames > 1:
-            x = F.avg_pool3d(x, kernel_size=(2, 1, 1)).squeeze(2)
+            # concat time dimension into channel dimension instead of averaging.
+            # x: (B, C, T, H, W) -> (B, C*T, H, W)
+            b, c, t, h, w = x.shape
+            x = x.reshape(b, c * t, h, w)
         else:  # case where only using one time-step as input
             x = x.squeeze(2)
 
@@ -635,7 +647,10 @@ class CrossFormer(BaseModel):
         if self.use_interp:
             x = F.interpolate(x, size=(self.image_height, self.image_width), mode="bilinear")
 
-        x = x.unsqueeze(2)
+        # restore time dimension: (B, base_output_channels * output_frames, H, W)
+        # -> (B, base_output_channels, output_frames, H, W)
+        b, _, h, w = x.shape
+        x = x.view(b, self.base_output_channels, self.output_frames, h, w)
 
         if self.use_post_block:
             x = {

@@ -126,8 +126,8 @@ def find_common_indices(list1, list2):
 
 def concat_and_reshape(x1, x2):
     """Flattening the "level" coordinate of upper-air variables and concatenate it will surface variables."""
-    print("x1 shape: ", x1.shape)
-    print("x2 shape: ", x2.shape)
+    # print("x1 shape: ", x1.shape)
+    # print("x2 shape: ", x2.shape)
     x1 = x1.view(
         x1.shape[0], x1.shape[1], x1.shape[2] * x1.shape[3], x1.shape[4], x1.shape[5]
     )

@@ -9,6 +9,7 @@ from credit.datasets.era5_multistep_batcher import (
     MultiprocessingBatcherPrefetch,
 )
 from credit.datasets.gap_aware_singlestep import GapAwareSingleStep
+from credit.datasets.gap_aware_multistep import GapAwareMultiStepBatcher
 
 from credit.datasets import setup_data_loading
 from torch.utils.data import DataLoader
@@ -276,6 +277,36 @@ def load_dataset(conf, rank=0, world_size=1, is_train=True):
             sst_forcing=data_config.get("sst_forcing"),
             valid_pairs_path=pairs_path,
         )
+    elif dataset_type == "GapAwareMultiStepBatcher":
+        if is_train:
+            windows_path = conf["data"]["train_windows_path"]
+        else:
+            windows_path = conf["data"]["valid_windows_path"]
+        dataset = GapAwareMultiStepBatcher(
+            varname_upper_air=data_config["varname_upper_air"],
+            varname_surface=data_config["varname_surface"],
+            varname_dyn_forcing=data_config["varname_dyn_forcing"],
+            varname_forcing=data_config["varname_forcing"],
+            varname_static=data_config["varname_static"],
+            varname_diagnostic=data_config["varname_diagnostic"],
+            filenames=data_config[f"{training_type}_files"],
+            filename_surface=data_config[f"{training_type}_surface_files"],
+            filename_dyn_forcing=data_config[f"{training_type}_dyn_forcing_files"],
+            filename_forcing=data_config["forcing_files"],
+            filename_static=data_config["static_files"],
+            filename_diagnostic=data_config[f"{training_type}_diagnostic_files"],
+            history_len=history_len,
+            forecast_len=forecast_len,
+            skip_periods=data_config["skip_periods"],
+            max_forecast_len=data_config["max_forecast_len"],
+            transform=load_transforms(conf),
+            batch_size=batch_size,
+            shuffle=shuffle,
+            rank=rank,
+            world_size=world_size,
+            valid_windows_path=windows_path,
+            expected_interval_h=conf["data"].get("expected_interval_h", 6),
+        )
     else:
         raise ValueError(f"Unsupported dataset type: {dataset_type}")
 
@@ -362,7 +393,11 @@ def load_dataloader(conf, dataset, rank=0, world_size=1, is_train=True):
             num_workers=1,
             prefetch_factor=prefetch_factor,
         )
-    elif type(dataset) is ERA5_MultiStep_Batcher:
+    elif isinstance(dataset, ERA5_MultiStep_Batcher) and not isinstance(
+        dataset, (MultiprocessingBatcher, MultiprocessingBatcherPrefetch)
+    ):
+        # Catches ERA5_MultiStep_Batcher and its subclasses (e.g. GapAwareMultiStepBatcher).
+        # Exclude the multiprocessing variants because they have their own dataloader paths below.
         dataloader = DataLoader(
             dataset,
             num_workers=1,
